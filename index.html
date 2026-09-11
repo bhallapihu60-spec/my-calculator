@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
 
@@ -10,7 +11,7 @@
     <!-- Calculator styling -->
     <link rel="stylesheet" href="style.css">
 
-    <!-- App manifest -->
+    <!-- PWA manifest -->
     <link rel="manifest" href="manifest.json">
 
     <!-- App icon -->
@@ -25,11 +26,13 @@
 
     <div class="calculator">
 
+        <!-- Display -->
         <div class="display">
             <div id="previous"></div>
             <div id="current">0</div>
         </div>
 
+        <!-- Calculator buttons -->
         <div class="buttons">
 
             <!-- Top row -->
@@ -68,5 +71,21 @@
     <!-- Calculator JavaScript -->
     <script src="script.js"></script>
 
+    <!-- Service Worker -->
+    <script>
+        if ("serviceWorker" in navigator) {
+            window.addEventListener("load", () => {
+                navigator.serviceWorker.register("service-worker.js")
+                    .then(() => {
+                        console.log("Service Worker registered successfully");
+                    })
+                    .catch(error => {
+                        console.log("Service Worker registration failed:", error);
+                    });
+            });
+        }
+    </script>
+
 </body>
+
 </html>
