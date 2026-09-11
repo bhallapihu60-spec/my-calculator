@@ -4,17 +4,12 @@
   "description": "A simple personal calculator",
   "start_url": "./",
   "display": "standalone",
-  "background_color": "#f4eef3",
-  "theme_color": "#252329",
+  "background_color": "#0d0d0f",
+  "theme_color": "#f6a6c1",
   "orientation": "portrait",
   "icons": [
     {
-      "src": "icon-192.png",
-      "sizes": "192x192",
-      "type": "image/png"
-    },
-    {
-      "src": "icon-512.png",
+      "src": "icon.png",
       "sizes": "512x512",
       "type": "image/png"
     }
