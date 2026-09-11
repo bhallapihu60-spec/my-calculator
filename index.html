@@ -7,7 +7,14 @@
 
     <title>My Calculator</title>
 
+    <!-- Calculator styling -->
     <link rel="stylesheet" href="style.css">
+
+    <!-- Make the website installable as an app -->
+    <link rel="manifest" href="manifest.json">
+
+    <!-- App theme color -->
+    <meta name="theme-color" content="#252329">
 </head>
 
 <body>
@@ -21,26 +28,31 @@
 
         <div class="buttons">
 
+            <!-- Top row -->
             <button class="function" onclick="clearCalculator()">AC</button>
             <button class="function" onclick="toggleSign()">±</button>
             <button class="function" onclick="percentage()">%</button>
             <button class="operator" onclick="chooseOperator('/')">÷</button>
 
+            <!-- Row 2 -->
             <button onclick="appendNumber('7')">7</button>
             <button onclick="appendNumber('8')">8</button>
             <button onclick="appendNumber('9')">9</button>
             <button class="operator" onclick="chooseOperator('*')">×</button>
 
+            <!-- Row 3 -->
             <button onclick="appendNumber('4')">4</button>
             <button onclick="appendNumber('5')">5</button>
             <button onclick="appendNumber('6')">6</button>
             <button class="operator" onclick="chooseOperator('-')">−</button>
 
+            <!-- Row 4 -->
             <button onclick="appendNumber('1')">1</button>
             <button onclick="appendNumber('2')">2</button>
             <button onclick="appendNumber('3')">3</button>
             <button class="operator" onclick="chooseOperator('+')">+</button>
 
+            <!-- Bottom row -->
             <button class="zero" onclick="appendNumber('0')">0</button>
             <button onclick="appendDecimal()">.</button>
             <button class="equals" onclick="calculate()">=</button>
@@ -49,6 +61,7 @@
 
     </div>
 
+    <!-- Calculator JavaScript -->
     <script src="script.js"></script>
 
 </body>
